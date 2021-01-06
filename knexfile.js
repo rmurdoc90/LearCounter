@@ -5,15 +5,16 @@ const { pgConnection } = require("./config/vars")
 module.exports = {
 
   development: {
-    client: 'pg',
+    client: 'sqlite3',
     connection: {
-      host: '127.0.0.1',
-      user: 'postgres',
-      password: 's115115744'
+      filename: "./database/count.db3"
     },
     migrations: {
       directory: "./database/migrations",
     },
+    seeds: {
+      directory: "./database/seeds",
+    }
   },
 
   production: {

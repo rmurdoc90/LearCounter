@@ -7,6 +7,7 @@ const Counter = require("./counter-model")
 router.get("/", (req, res) => {
   Counter.find()
     .then((counter) => {
+      // console.log(counter)
       res.status(200).json(counter)
     })
     .catch((err) => {
@@ -16,13 +17,24 @@ router.get("/", (req, res) => {
 
 // GET the number, add 1, update the db, return new number
 router.get("/update", (req, res) => {
-  let count = Counter.find()
-  count ++
-  Counter.update(count)
-    .then((updatedCount) => {
-      res.status(200).json(updatedCount)
+  Counter.update()
+    .then((counter) => {
+      res.status(200).json(counter)
     })
     .catch((err) => {
-      res.status(500).json({ error: err.message })
+      res.status(500).json({ message: err.message })
     })
 }) 
+
+// GET the reset of the number
+router.get("/reset", (req, res) => {
+  Counter.reset()
+    .then((counter) => {
+      res.status(200).json(counter)
+    })
+    .catch((err) => {
+      res.status(500).json({ message: err.message })
+    })
+})
+
+module.exports = router
