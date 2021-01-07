@@ -5,17 +5,29 @@ const { pgConnection } = require("./config/vars")
 module.exports = {
 
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: "./database/count.db3"
+    client: 'pg',
+    connection: pgConnection,
+    pool: {
+      min: 2,
+      max: 10
     },
     migrations: {
-      directory: "./database/migrations",
+    directory: "./database/migrations",
     },
-    seeds: {
-      directory: "./database/seeds",
-    }
   },
+
+  // development: {
+  //   client: 'sqlite3',
+  //   connection: {
+  //     filename: "./database/count.db3"
+  //   },
+  //   migrations: {
+  //     directory: "./database/migrations",
+  //   },
+  //   seeds: {
+  //     directory: "./database/seeds",
+  //   }
+  // },
 
   production: {
     client: 'pg',
