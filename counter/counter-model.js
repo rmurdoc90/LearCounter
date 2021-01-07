@@ -3,7 +3,7 @@ const db = require("../database/dbConfig")
 module.exports = {
   find,
   update,
-  reset
+  reset,
 };
 
 function find() {
