@@ -8,7 +8,6 @@ module.exports = {
     client: "sqlite3",
     connection: {
       filename: "./database/count.db3",
-
     },
     useNullAsDefault: true,
     pool: {
