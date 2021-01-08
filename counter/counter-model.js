@@ -23,7 +23,7 @@ async function update() {
 }
 
 function reset() {
-  return db("counter").where("id", 1).update({ "count": 0 }).then(() => {
+  return db("counter").where("id", 1).update({ "count": 25883 }).then(() => {
     return find()
   })
 }
