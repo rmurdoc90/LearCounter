@@ -8,6 +8,7 @@ module.exports = {
     client: "sqlite3",
     connection: {
       filename: "./database/count.db3",
+
     },
     useNullAsDefault: true,
     pool: {
@@ -19,7 +20,9 @@ module.exports = {
       directory: "./database/migrations",
     },
     seeds: {
+
       directory: "./database/seeds",
+
     }
   },
 
@@ -47,7 +50,9 @@ module.exports = {
     directory: "./database/migrations",
     },
     seeds: {
+
       directory: "./database/seeds",
+
     }
   }
 
