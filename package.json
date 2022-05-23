@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrsimpson3000/LearCounter.git"
+    "url": "git+https://github.com/rmurdoc90/LearCounter.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrsimpson3000/LearCounter/issues"
+    "url": "https://github.com/rmurdoc90/LearCounter/issues"
   },
-  "homepage": "https://github.com/mrsimpson3000/LearCounter#readme",
+  "homepage": "https://github.com/rmurdoc90/LearCounter#readme",
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
